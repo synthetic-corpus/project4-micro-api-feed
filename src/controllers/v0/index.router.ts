@@ -7,7 +7,7 @@ const router: Router = Router();
 router.use('/feed', FeedRouter);
 
 
-router.get('/healty', async (req: Request, res: Response) => {
+router.get('/healthy', async (req: Request, res: Response) => {
   res.send(`V0 - feed API is up`);
 });
 
