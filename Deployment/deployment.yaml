@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-feed-svc
+  labels:
+    app: api-feed-svc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-feed-svc
+  template:
+    metadata:
+      labels:
+        app: api-feed-svc
+    spec:
+      containers:
+      - name: api-feed-svc
+        image: gonzaga626/05-api-feed
+        ports:
+        - containerPort: 8080

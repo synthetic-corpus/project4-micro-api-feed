@@ -1,0 +1,18 @@
+apiVersion: v0
+kind: Service
+metadata:
+  labels:
+    app: api-users-svc
+  name: api-users-svc
+  namespace: default
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: api-users-svc
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
