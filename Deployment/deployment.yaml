@@ -60,3 +60,8 @@ spec:
               configMapKeyRef:
                 name: env-config
                 key: URL
+          - name: POSTGRES_USERNAME
+            valueFrom:
+              configMapKeyRef:
+                name: env-config
+                key: POSTGRES_USERNAME
