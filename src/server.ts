@@ -35,6 +35,11 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
     res.send( 'Check /healthy for more details' );
   } );
 
+   // Docker Health Check
+   app.get( '/health', async ( req, res ) => {
+    res.status(200).send('API feed is up');
+  } );
+
 
   // Start the Server
   app.listen( port, () => {
