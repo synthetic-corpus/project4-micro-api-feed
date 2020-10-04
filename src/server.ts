@@ -28,12 +28,12 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
     origin: config.url,
   }));
 
+  
+
+  // Forward to Feed
   app.use('/', FeedRouter);
   
-   // Docker Health Check
-   app.get( '/health', async ( req, res ) => {
-    res.status(200).send('API feed is up');
-  } );
+   
 
 
   // Start the Server
