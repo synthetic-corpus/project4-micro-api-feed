@@ -19,12 +19,13 @@ spec:
         image: gonzaga626/05-api-feed
         ports:
         - containerPort: 8080
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 8080
-          initialDelaySeconds: 3
-          periodSeconds: 5
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"
         env:
         - name: AWS_MEDIA_BUCKET
           valueFrom:
