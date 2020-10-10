@@ -25,10 +25,10 @@ import {V0_FEED_MODELS} from './controllers/v0/model.index';
       'X-Access-Token', 'Authorization','Access-Control-Allow-Origin'
     ],
     methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-    origin: '*'
+    origin: config.url
   }));
 
-  console.log("manually setting origin to wild card")
+  console.log("Config URL Variable is, ",config.url)
 
   // Forward to Feed
   app.use('/', FeedRouter);
